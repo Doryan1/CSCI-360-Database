@@ -15,7 +15,11 @@ public class startup implements ActionListener{
 	private static JLabel LogTrue;
 	static int LogSuccess;
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception{
+
+		final var db = new Database("./project.db");
+		
+		
 		JFrame frame = new JFrame("startup") ; 
 		JPanel panel = new JPanel();
     	frame.setSize(550, 200);
