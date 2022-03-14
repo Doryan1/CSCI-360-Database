@@ -34,7 +34,7 @@ public class admin {
 		f.add(b3) ;
 		b3.addActionListener(new Button3()) ;
 		
-		JButton b4 = new JButton("Profeesor") ; //Will pull up the staff gui
+		JButton b4 = new JButton("Profeesor") ; //Will pull up the professor gui
 		f.add(b4) ;
 		b4.addActionListener(new Button4()) ; 
 		

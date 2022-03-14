@@ -1,8 +1,5 @@
-import java.io.* ; 
 import java.awt.event.* ;  
-import javax.sound.sampled.* ;
 import javax.swing.* ;
-import java.util.* ;
 
 //initial code from final project from another class
 public class startup implements ActionListener{
@@ -17,6 +14,7 @@ public class startup implements ActionListener{
 	
 	public static void main(String[] args) throws Exception{
 
+		@SuppressWarnings("unused")
 		final var db = new Database("./project.db");
 		
 		
@@ -60,13 +58,13 @@ public class startup implements ActionListener{
     	panel.add(LogTrue);
     	frame.setVisible(true);
 	}
-
+	
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		String user = userText.getText() ; 
 		
-		if(user.equals("TA")) {
+		if(user.equals("ta")) {
 				TA teacherassist = new TA() ;
 				teacherassist.ta() ; 
 		}
@@ -86,8 +84,10 @@ public class startup implements ActionListener{
 			admin a = new admin() ; 
 			a.admin(); 
 		}
+		
 		else {
-			LogTrue.setText("ID NOT AVA");
+			//will tell the user to try again
+			LogTrue.setText("ID NOT Recognized, Please Try Again");
 			
 		}
 		

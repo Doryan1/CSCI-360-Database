@@ -1,5 +1,5 @@
 student
 professor
-TA
-Staff
-Admin
+ta
+staff
+admin
