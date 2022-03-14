@@ -66,7 +66,7 @@ public class startup implements ActionListener{
 		// TODO Auto-generated method stub
 		String user = userText.getText() ; 
 		
-		if(user.equals("TA")) {
+		if(user.equals("ta")) {
 				TA teacherassist = new TA() ;
 				teacherassist.ta() ; 
 		}
@@ -86,6 +86,7 @@ public class startup implements ActionListener{
 			admin a = new admin() ; 
 			a.admin(); 
 		}
+		
 		else {
 			//will tell the user to try again
 			LogTrue.setText("ID NOT Recognized, Please Try Again");
