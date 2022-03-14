@@ -6,13 +6,13 @@ import java.sql.SQLException;
 import java.sql.PreparedStatement;
 
 // Temporary object. to be replaced with the real one later
-class Professor{
+class Prof{
 	int id;
 	String department;
 	String firstName;
 	String lastName;
 	String birthDate;
-	public Professor(int id, String department, String firstName, String lastName, String birthDate) {
+	public Prof(int id, String department, String firstName, String lastName, String birthDate) {
 		this.id = id;
 		this.department = department;
 		this.firstName = firstName;
@@ -65,7 +65,7 @@ public class Database
 		return id;
 	}
 
-	public Professor getProfessor(int id) throws SQLException
+	public Prof getProfessor(int id) throws SQLException
 	{
 		this.connection.rollback();
 		this.getProfessor.setInt(1, id);
@@ -74,10 +74,10 @@ public class Database
 		final var ln = res.getString("last_name");
 		final var bd = res.getString("birth_date");
 		final var dp = res.getString("department");
-		return new Professor(id, fn, ln, bd, dp);
+		return new Prof(id, fn, ln, bd, dp);
 	}
 
-	public void updateProfessor(Professor professor) throws SQLException
+	public void updateProfessor(Prof professor) throws SQLException
 	{
 		this.connection.rollback();
 		this.updateProfessor.setInt(1, professor.id);
@@ -101,7 +101,7 @@ public class Database
 		this.connection.commit();
 	}
 
-	public Professor deleteProfessor(int id) throws SQLException
+	public Prof deleteProfessor(int id) throws SQLException
 	{
 		this.connection.rollback();
 		this.deleteProfessor.setInt(1, id);
@@ -119,6 +119,6 @@ public class Database
 		deletePersonRes.close();
 
 		this.connection.commit();
-		return new Professor(id, department, firstName, lastName, birthDate);
+		return new Prof(id, department, firstName, lastName, birthDate);
 	}
 }
