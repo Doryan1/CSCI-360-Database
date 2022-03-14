@@ -17,7 +17,7 @@ public class startup implements ActionListener{
 	
 	public static void main(String[] args) throws Exception{
 
-		final var db = new Database("./project.db");
+//		final var db = new Database("./project.db");
 		
 		
 		JFrame frame = new JFrame("startup") ; 
@@ -60,7 +60,7 @@ public class startup implements ActionListener{
     	panel.add(LogTrue);
     	frame.setVisible(true);
 	}
-
+	
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
