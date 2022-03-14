@@ -36,6 +36,8 @@ public class Database
 		final var url = "jdbc:sqlite:" + dbPath;
 		this.connection = DriverManager.getConnection(url);
 		this.connection.setAutoCommit(false);
+		//allows the setup of a form connection
+		//this will also allow to present all the data on the form when searching 
 		this.insertPerson = this.connection.prepareStatement("INSERT INTO PERSON (first_name, last_name, birth_date) VALUES (?, ?, ?) RETURNING id");
 		this.updatePerson = this.connection.prepareStatement("UPDATE PERSON SET first_name = ?, last_name = ?, birth_date = ? WHERE id = ?");
 		this.deletePerson = this.connection.prepareStatement("DELETE FROM PERSON WHERE id = ? RETURNING *");
