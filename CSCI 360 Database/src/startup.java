@@ -1,8 +1,5 @@
-import java.io.* ; 
 import java.awt.event.* ;  
-import javax.sound.sampled.* ;
 import javax.swing.* ;
-import java.util.* ;
 
 //initial code from final project from another class
 public class startup implements ActionListener{
@@ -17,7 +14,8 @@ public class startup implements ActionListener{
 	
 	public static void main(String[] args) throws Exception{
 
-//		final var db = new Database("./project.db");
+		@SuppressWarnings("unused")
+		final var db = new Database("./project.db");
 		
 		
 		JFrame frame = new JFrame("startup") ; 
