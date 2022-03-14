@@ -87,7 +87,8 @@ public class startup implements ActionListener{
 			a.admin(); 
 		}
 		else {
-			LogTrue.setText("ID NOT AVA");
+			//will tell the user to try again
+			LogTrue.setText("ID NOT Recognized, Please Try Again");
 			
 		}
 		
